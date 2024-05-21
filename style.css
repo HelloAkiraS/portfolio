@@ -1,0 +1,206 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed&family=Inter+Tight:ital,wght@0,300;0,500;0,600;1,400&family=Jost:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
+/*   V A R I A B L E S   */
+:root{
+    font-size: 62.5%;
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-size: 1.6rem;
+    background-color: #fff;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*   L A N D   P A G E   */
+.absolute-animation-div{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+    .absolute-animation-div .wrapper-svg-morph{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        width: 100%;
+    }
+        .absolute-animation-div .arrow-circle-div{
+            display: relative;
+        }
+        .arrow-0{
+            position: absolute;
+            margin-right: 4rem;
+        }
+        .arrow-1, .arrow-2, .arrow-3, .arrow-4{
+            position: absolute;
+            margin-right: 4rem;
+            transform: translateX(-750px);
+            visibility: hidden;
+            overflow: visible;
+        }
+            .arrow-2{
+                z-index: -2;
+            }
+            .arrow-3{
+                z-index: -3;
+            }
+            .arrow-4{
+                z-index: -4;
+            }
+
+main.land{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+.arrow-circle-main{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: end;
+}
+    .arrow-circle-div{
+        width: 12rem;
+        height: 12rem;
+        background-color: #000;
+        border-radius: 100%;
+        margin-right: 8rem;
+        transition: .3s ease-in-out;
+    }
+        .arrow-circle-div:hover{
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            transition: .5s ease-in-out;
+            
+        }
+
+.land-text{
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem 5rem 5rem 0rem;
+
+    font-family: "Noto Sans JP";
+    font-size: 8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+    .wrapper-text-mid .cursor, .wrapper-text-end .cursor{
+        visibility: hidden;
+    }
+        .wrapper-text-mid .cursor.toggle, .wrapper-text-end .cursor.toggle{
+            visibility: visible;
+        }
+
+/*   H O M E   P A G E   */
+aside{
+    background-color: white;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    aside .topic{
+        font-family: Jost;
+        width: auto;
+        margin: 2rem;
+        background-color: #000;
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 2rem;
+        cursor: pointer;
+    }
+
+.language-toggle-bar{
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+}
+
+main.home section{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
+/* ABOUT ME */
+.about{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.about-content{
+    width: 100%;
+    height: 80%;
+    background-color: aqua;
+    margin-left: 20rem;
+}
+.about-content-spans{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    height: 100%;
+    font-family: "Noto Sans JP";
+    font-size: 7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
